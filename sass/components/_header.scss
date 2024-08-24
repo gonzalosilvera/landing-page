@@ -1,0 +1,50 @@
+// Header
+header {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: $header-height;
+    background-color: $clr-neutral-900;
+    nav {
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+        height: 100%;
+        padding-inline: 1rem;
+        .client {
+            .heading {
+                font-weight: 300;
+                text-transform: capitalize;
+                color: $clr-neutral-100;
+            }
+        }
+        .link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            opacity: .6;
+            @include media(lg) {
+                opacity: .6;
+                transition: .4s ease;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            .text {
+                display: none;
+                @include media(md) {
+                    display: block;
+                    width: max-content;
+                    font-size: 14px;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    color: $clr-neutral-100;
+                }
+            }
+            .image {
+                object-fit: contain;
+                width: 35px;
+            }   
+        }
+    }
+}

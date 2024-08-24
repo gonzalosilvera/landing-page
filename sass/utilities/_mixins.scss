@@ -1,0 +1,20 @@
+/* Mixins */
+
+/* Media queries */
+@use "sass:map";
+@mixin media($size) {
+    $value: #{map.get($breakpoints, $size)};
+    @media (min-width: #{$value}){
+        @content;
+    }
+}
+
+// Container
+@mixin container {
+    max-width: 960px;
+    margin: auto;
+    padding-inline: 20px;
+}
+@mixin container-fluid {
+    padding-inline: 20px;
+}

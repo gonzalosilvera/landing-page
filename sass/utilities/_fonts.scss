@@ -1,0 +1,82 @@
+// Fonts
+// Font family: Roboto
+// URL: https://fonts.google.com/specimen/Roboto
+
+// Font source
+@font-face {
+  src: url("./assets/fonts/Roboto-Light.ttf");
+  font-family: Roboto;
+  font-weight: 300;
+}
+
+@font-face {
+  src: url("./assets/fonts/Roboto-Regular.ttf");
+  font-family: Roboto;
+  font-weight: 400;
+}
+
+@font-face {
+  src: url("./assets/fonts/Roboto-Medium.ttf");
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+@font-face {
+  src: url("./assets/fonts/Roboto-Bold.ttf");
+  font-family: Roboto;
+  font-weight: 700;
+}
+@font-face {
+  src: url("./assets/fonts/Roboto-Black.ttf");
+  font-family: Roboto;
+  font-weight: 900;
+}
+
+// Body & HTML
+html,
+body,
+* {
+  font-family: Roboto, helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: $clr-neutral-900;
+}
+
+// Heading
+h1 {
+  font-size: 32px;
+  font-weight: 300;
+  @include media(lg) {
+    font-size: 42px;
+  }
+}
+
+h2 {
+  font-size: 38px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 18px;
+  @include media(lg) {
+    font-size: 22px;
+  }
+}
+
+h5 {
+  font-size: 16px;
+}
+
+// Form
+input, select, option {
+  font-size: 22px;
+}
+
+// Button
+button {
+  font-weight: 700;
+}

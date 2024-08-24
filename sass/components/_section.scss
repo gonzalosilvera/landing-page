@@ -1,0 +1,14 @@
+// Section
+
+// Slider
+.carousel {
+  background-color: $clr-neutral-300;
+  @include media(lg) {
+    @include container-fluid;
+  }
+}
+
+// Grid
+.gallery {
+    margin-block: 3rem;
+}

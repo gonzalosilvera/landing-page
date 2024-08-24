@@ -1,0 +1,23 @@
+.gallery {
+    .gallery-wrapper {
+        width: fit-content;
+        margin-inline: auto;
+        .grid {
+            display: grid;
+            justify-content: center;
+            justify-items: center;
+            grid-gap: 2rem;
+            margin-top: 1rem;
+            @include media(md) {
+                grid-gap: 0 2rem;
+                grid-template-columns: repeat(2, auto);
+            }
+            @include media(lg) {
+                grid-template-columns: repeat(3, auto);
+            }
+            @include media(xl) {
+                grid-template-columns: repeat(4, auto);
+            }
+         }
+    }
+}

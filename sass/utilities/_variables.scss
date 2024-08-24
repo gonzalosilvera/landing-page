@@ -1,0 +1,32 @@
+// Variables
+
+// Breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1400px
+);
+
+// Colors
+$clr-neutral-100: #ffffff;
+$clr-neutral-300: #d2d2d2;
+$clr-neutral-500: #b2b2b2;
+$clr-neutral-700: #858585;
+$clr-neutral-900: #000000;
+$clr-primary: #4ea6e5;
+$clr-error: #ff0000;
+
+// Header
+$header-height: 55px;
+
+// Carousel
+$slick-arrow-position: 0;
+$slick-arrows-size: 80px;
+$slick-prev-image: url(./assets/images/arrow-left.svg) !default;
+$slick-next-image: url(./assets/images/arrow-right.svg) !default;
+
+// Card
+$card-mt: 2rem;

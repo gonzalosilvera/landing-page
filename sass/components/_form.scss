@@ -1,0 +1,141 @@
+.form {
+  h1 {
+    text-align: center;
+  }
+  margin-block: 4rem 6rem;
+  form {
+    display: grid;
+    grid-gap: 1rem 2rem;
+    @include container;
+    margin-top: 3rem;
+    @include media(md) {
+      grid-template-columns: repeat(2, 1fr);
+      .firstname {
+        grid-column: 1/2;
+        grid-row: 1;
+      }
+      .secondname {
+        grid-column: 2/3;
+        grid-row: 1;
+      }
+      .email {
+        grid-column: 1/3;
+        grid-row: 2;
+      }
+      .dpto {
+        grid-column: 1/2;
+        grid-row: 3;
+      }
+      .loc {
+        grid-column: 2/3;
+        grid-row: 3;
+      }
+      .ci {
+        grid-column: 1/2;
+        grid-row: 4;
+      }
+      .terms {
+        grid-column: 2/3;
+        grid-row: 4;
+      }
+      .btn {
+        grid-column: 1/3;
+        grid-row: 5;
+      }
+    }
+    .terms {
+      .form-control {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: start;
+         @include media(md) {
+          align-items: center;
+         }
+        input {
+          position: relative;
+          grid-column: 1/2;
+          grid-row: 1;
+          $checkbox-size: 25px;
+          width: $checkbox-size;
+          height: $checkbox-size;
+          appearance: none;
+          outline: none;
+          border: none;
+          &::after {
+            border: solid $clr-neutral-700 1px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: $checkbox-size;
+            height: $checkbox-size;
+            content: '';
+            visibility: visible;
+            border-radius: 5px;
+          }
+          &:checked{
+            &::after {
+              background-image: url("./assets/images/check-mark.svg");
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: 80%;
+            }
+          } 
+        }
+        p {
+          grid-column: 2/3;
+          grid-row: 1;
+          font-size: 22px;
+          font-weight: 300;
+          color: $clr-neutral-700;
+        }
+        small {
+          grid-column: 1/3;
+          grid-row: 2;
+        }
+      }
+    }
+    .form-control {
+      display: grid;
+      align-items: center;
+      grid-auto-flow: row;
+      @include media(md) {
+        grid-template-rows: 65px auto;
+      }
+      grid-gap: 0.5rem;
+      small {
+        color: $clr-error;
+        visibility: hidden;
+      }
+      &.error {
+        input, select {
+          border-color: $clr-error;
+        }
+        small {
+          visibility: visible;
+        }
+      }
+    }
+    input,
+    select {
+      height: 4rem;
+      padding: 0 1rem;
+      border: solid 1px #b2b2b2;
+      border-radius: 5px;
+      :focus {
+        border: solid 1px #b2b2b2;
+      }
+    }
+    input::placeholder,
+    select {
+      color: #b2b2b2;
+    }
+    select {
+      appearance: none;
+      background-image: url("./assets/images/select-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: calc(100% - 1rem) center;
+      background-size: 15px;
+      padding-right: 1rem;
+    }
+  }
+}

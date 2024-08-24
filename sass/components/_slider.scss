@@ -1,0 +1,49 @@
+// List
+.slick-list {
+  padding-inline: 20px;
+  @include media(lg) {
+    overflow: visible;
+  }
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  height: $slick-arrows-size;
+  width: $slick-arrows-size;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  font-size: 0px;
+  line-height: 0px;
+  background: $clr-neutral-100;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  visibility: hidden;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  border: none;
+  border-radius: 100%;
+  &:before {
+    color: $clr-primary;
+  }
+  @include media(lg) {
+    visibility: unset;
+  }
+}
+
+.slick-prev {
+  left: $slick-arrow-position;
+  background-image: $slick-prev-image;
+  background-position: 45% center;
+}
+
+.slick-next {
+  right: $slick-arrow-position;
+  background-image: $slick-next-image;
+  background-position: 55% center;
+}
